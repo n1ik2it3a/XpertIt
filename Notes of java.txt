@@ -1,0 +1,340 @@
+# Difference between abstract class and interface
+		Abstrct class             					Interface
+abstract class have abstract methods and non			Interface have only abstract methods.
+abstract methods.
+
+It has static,non static,final and non				It has static and final variables.
+final variables.
+
+abstract class extends by using keyword extend	.		It implemented by using implement keyword.
+
+It has protected and private members.				The members of java interface is public by default.
+
+abstrct keyword is used to declare abstract class.		Interface keyword is used to declare Interface.
+
+abstract class can provide the implementation of 		interface can't provide the implementation of abstract class.
+interface.
+
+abstract class doesn't support multiple inheritance.		interface support multiple inheritance.
+
+
+# what is platform independent in java?
+Java is platform independent bacause it use virtual machine. java programming and APIs are compiled into bytecodes.bytecode is effectively platform independent.
+The virtual machine takes care the difference between bytecode for the different machines. 
+
+
+# What is diff bet C++ and java?
+		C++								Java
+C++ is used only compiler.					java is used both compiler and intrpreter.
+
+It support multiple inheritance.				it does not support multiple inheritance.
+
+It support pointer,operator overloading,goto statement.		It does not support pointer,Operator,overloading,goto statement.
+
+It has both call by value and call by reference.		It has call by value only.
+
+
+# What is JIT compiler?
+JIT compiler stands for Just In Time compiler.It improves the performance of java application by compiling bytecode to native machine code at run time.
+
+
+# What is byte code in java?
+Bytecode in Java is a set of instructions for the Java Virtual Machine. Bytecode is a platform-independent code. Bytecode is a code that 
+lies between low-level language and high-level language. After the Java code is compiled, the bytecode gets generated, which can be executed 
+on any machine using JVM.
+
+
+#  What is class?
+Class is a group of objects which have common properties.
+It is a templet or blueprint which the object are created.
+It is logical entity.
+ex: Animal,Vehical etc.
+
+
+#  What is object?
+Object is a real world entity. It is a member of java class.Each object has identity,state and behaviour.
+ex: Table,Fan etc.
+
+
+#  What is method?
+A method in Java is a block of code that, when called, performs specific actions mentioned in it. For instance, if you have 
+written instructions to draw a circle in the method, it will do that task. 
+
+
+#  What is encapsulation?
+The process of binding a data and corresponding functions together in a single unit is called encapsulation. 
+Encapsulation in Java is the process by which data (variables) and the code that acts upon them (methods) are integrated as a single unit.
+ex: School bag is one of the most real examples of Encapsulation. School bag can keep our books, pens, etc.
+Encapsulation in Java is a process of wrapping code and data together into a single unit.
+for example, a capsule which is mixed of several medicines.
+
+
+#  Why main() method is public, static and void in java ? 
+#  Explain about main() method in java ? 
+public: It is access specifier In main method public is used to access the methods of outside of the class.
+static: You can make a method static by using the keyword static. We should call the main() method without creating an object.
+	Static methods are the method which invokes without creating the objects, so we do not need any object to call the main() method.
+void: In Java, every method has the return type. Void keyword acknowledges the compiler that main() method does not return any value.
+main: It is a default signature which is predefined in the JVM. 
+String args[]: The main() method also accepts some data from the user. It accepts a group of strings, which is called a string array. 
+		It is used to hold the command line arguments in the form of string values.
+
+#   What is ASCII code?
+ASCII code stands for American standard code for information interchange.ASCII is standard data transmission code that is used by computer
+for representing both textual data and control characters.ASCII is a 7-bit character set having 128 characters, i.e., from 0 to 127.
+
+#  What is unicode?
+Unicode is a computing industry standard designed to consistently and uniquely encode characters used in written languages throughout the world. 
+The Unicode standard uses hexadecimal to express a character. For example, the value 0x0041 represents the Latin character A.
+
+
+#  diff bet character constant and string constant?
+		Character Constant								String Constant
+Character Constants are written by enclosing a 			String Constants are written by enclosing a set of characters 
+character within a pair of single quotes.			within a pair of double quotes.
+	
+Character Constants are assigned to variables of type char.	String Constants are assigned to variables of type String.
+
+#   What are constants and how to create constants in java?
+In Java programming constant is an variable whose value cannot be changes once it has been assgined. 
+Constants can be declared using Java's static and final keywords. 
+The static keyword is used for memory management and final keyword signifies the property that the value of the variable cannot be changed.
+
+To make <var_name> a constant, you only need to add the const qualifier to this statement as follows:
+ const <data_type> <var_name> = <value>;
+EX: 
+public class Declaration {
+
+  static final double PI = 3.14;
+
+  public static void main(String[] args) {
+    System.out.println("Value of PI:  " + PI);
+  }
+}
+
+
+#   What is method overriding in java?
+In Java, method overriding occurs when a subclass (child class) has the same method as the parent class.
+One of the ways that Java manages Run Time Polymorphism is by method overriding. 
+EX:
+class Vehicle{
+void engine(){
+System.out.println("this is vehicle engine");
+}
+}
+
+ class Bike extends Vehicle{
+void engine(){
+System.out.println ("this is bike engine");
+}
+}
+
+ class Car extends Vehicle{
+void engine(){
+System.out.println ("this is car engine");
+}
+}
+
+public class Code Example {
+public static void main(String[] arg) {
+Bike honda = new Bike ();
+honda.engine();
+Car benz = new Car ();
+benz.engine ();  
+}
+}
+
+Output:
+this is bike engine
+this is car engine
+
+
+#  What is super keyword in java ? 
+The super keyword in Java is a reference variable which is used to refer immediate parent class object.
+
+Usage of Java super Keyword
+super can be used to refer immediate parent class instance variable.
+super can be used to invoke immediate parent class method.
+super() can be used to invoke immediate parent class constructor.
+
+
+#  Difference between method overloading and method overriding in java ?
+			Method Overloading						Method Overriding
+Method overloading is used to increase the readability 			Method overriding is used to provide the specific implementation
+of the program.							        of the method that is already provided by its super class.
+			 
+When a class have same method name with different argument, 		Method overriding - Method of superclass is overridden 
+than it is called method overloading. 		 			in subclass to provide more specific implementation.
+
+method overloading is performed within the class.			method overriding occurs in two classes that have IS-A relationship.
+
+In case of method overloading, parameter must be different.		In case of method overriding, parameter must be same.
+
+Method overloading is the example of compile time polymorphism.	 	Method overriding is the example of run time polymorphism.
+		
+Method overloading may or may not require in inheritance.		Method overriding always need inheritance.
+
+
+#  Explain interface codding standards in java?
+ Usually interface name should be adjective starting with uppercase letter. If it contains multiple word than every inner word should start with uppercase. 
+
+#  What is codding standards for method?
+Coding Standards for Methods: Usually method name should either be verb or verb noun combination starting with lower letter.
+
+#  What are codding standards of constant in java?
+The names of variables declared class constants and of ANSI constants should be all uppercase with words separated by underscores ("_"). 
+(ANSI constants should be avoided, for ease of debugging.)
+
+# What is ‘IS-A ‘ relationship in java?
+IS-A relationship is also called inheritance in java.
+we can inherite the properties of one class to another class is called IS-A relationship.
+There are two types of IS-A relationship.
+IS-A relationship can simply be achieved by using extends Keyword.
+IS-A relationship is additionally used for code reusability in Java and to avoid code redundancy.
+IS-A relationship is unidirectional, which means we can say that a bulb is a device, but vice versa; a device is a bulb is not possible since all the devices are not bulbs.
+IS-A relationship is tightly coupled, which means changing one entity will affect another entity.
+Advantage of IS-A relationship 
+ code reusability.
+ code redundancy.
+
+
+# What is ‘HAS A’’ relationship in java?
+HAS-A relationship also known as Association.
+instance of one class is used to another class is called HAS-A relationship
+There are two types of HAS-A relationship
+*Composition is nothing but Strong association 
+and aggregation is nothing but weak association
+Has-A-relationship can be achieved using composition.
+
+
+34) Difference between ‘IS-A’ and ‘HAS-A’ relationship in java? 
+		IS-A relationship							HAS-A relationship
+IS-A relationship is also called inheritance in java.			HAS-A relationship also known as Association.
+
+we can inherite the properties of one class to another 			instance of one class is used to another class is called HAS-A relationship
+class is called IS-A relationship.
+
+IS-A relationship can simply be achieved by using extends Keyword.	Has-A-relationship can be achieved using composition.
+
+				
+35) Explain about instanceof operator in java? 
+The java instanceof operator is used to test whether the object is an instance of the specified type (class or subclass or interface).
+The instanceof in java is also known as type comparison operator because it compares the instance with type. 
+It returns either true or false. If we apply the instanceof operator with any variable that has null value, it returns false.
+
+
+36) What does null mean in java? 
+In Java, null is a reserved word for literal values. It seems like a keyword, but actually, it is a literal similar to true and false.
+Points to remember
+It is case-sensitive.
+It is a value of the reference variable.
+The access to a null reference generates a NullPointerException.
+It is not allowed to pass null as a value to call the methods that contain any primitive data type.
+
+
+37) Can we have multiple classes in single file ? 
+No, while defining multiple classes in a single Java file you need to make sure that only one class among them is public. 
+If you have more than one public classes a single file a compile-time error will be generated.
+
+
+38) What all access modifiers are allowed for top class ? 
+The top-level classes can only have public, abstract and final modifiers, and it is also possible to not define any class modifiers at all. 
+This is called default/package accessibility.
+
+
+39 ) What are packages in java?
+Package in java can be categorized in two form, built-in package and user-defined package.
+There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.
+Here, we will have the detailed learning of creating and using user-defined packages.
+
+40) Can we have more than one package statement in source file ?
+There can be only one package statement in each source file, and it applies to all types in the file.
+
+
+41) Can we define package statement after import statement in java? 
+No, we cannot define a package after the import statement in Java. The compiler will throw an error if we are trying to insert a package after the import statement. 
+A package is a group of similar types of classes, interfaces, and sub-packages.
+
+
+42) What are identifiers in java?
+Identifiers in Java are a sequence of characters to identify something in a program. 
+They are names given to a class, variable, package, method, or interface and allow the programmer to refer to the specific item from any place in the program.
+
+
+43) What are access modifiers in java? 
+There are two types of modifiers in Java: access modifiers and non-access modifiers.
+The access modifiers in Java specifies the accessibility or scope of a field, method, constructor, or class. We can change the access level of fields, constructors, methods, and class by applying the access modifier on it.
+There are four types of Java access modifiers:
+
+Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+
+Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. 
+If you do not specify any access level, it will be the default.
+
+Protected: The access level of a protected modifier is within the package and outside the package through child class. 
+If you do not make the child class, it cannot be accessed from outside the package.
+
+Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+
+There are many non-access modifiers, such as static, abstract, synchronized, native, volatile, transient, etc. Here, we are going to learn the access modifiers in java.
+
+
+44) What is the difference between access specifiers and access modifiers in java?
+The meaning of both the access specifiers and the access modifiers is the same.
+ There are no differences between the specifiers and modifiers, and the use of both is the same. 
+The access modifier is an official term and the new term that we use instead of modifier is specifier.
+So, default, public, protected, and private access modifiers can also be referred to as default, public, protected, and private access specifiers.
+
+
+45) What access modifiers can be used for class ?
+public,protected,private and default these all access modifiers are used in class.
+
+
+46) Explain what access modifiers can be used for methods?
+
+47) Explain what access modifiers can be used for variables? 
+
+
+# What is type casting in java?
+Type casting is a process to convert data type in another data type automatically or dynamically in java.
+There are two types of type casting.
+* Widening type casting
+this is process to convert lower data into higher data type is called Widening data type.
+byte -> short -> char -> int -> long -> float -> double  
+for example:
+int i=10;
+long l=i;
+float f=l;
+
+System.out.println("Before changing the value of int: "+ i);
+System.out.println("After changing the value of long: "+ l);
+System.out.println("After changing the value of float: "+ f);
+
+* Narrowing data type?
+this data type to convert higher data type into lower data type is called Narrowing data type.
+double -> float -> long -> int -> char -> short -> byte  
+for Example:
+double d=7645.98;
+short s=(short)d;
+int i1=(int)s;
+
+System.out.println("Before changing the value of double: "+d);
+System.out.println("After changing the value of short: "+s);
+System.out.println("After changing the value of int: "+i1);
+
+
+48) What is final access modifier in java?
+49) Explain about abstract classes in java? 
+
+50) Can we create constructor in abstract class ?
+51) What are abstract methods in java?
+52) What is an exception in java?
+53) State some situations where exceptions may arise in java? 
+54) What is Exception handling in java? 
+55) What is an eror in Java?
+56) What are advantages of Exception handling in java?
+57) In how many ways we can do exception handling in java? 
+58) List out five keywords related to Exception handling ?
+
+
+						
